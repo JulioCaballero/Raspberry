@@ -8,16 +8,18 @@
 </head>
 
 <body>
-    <input type="text">
+    <input type="text" name="texto">
     <button id="btnEnviar">Enviar</button>
 </body>
 </html>
 <script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>
     function enviarTexto(io){
 		    'use strict'
-			var io = io()
-            io.emit('mensaje',"Hola")
+            var io = io()       
+            let message = $("input").val();     
+            io.emit('mensaje', message)
           // console.log(texto);
 		}
         document.querySelector('#btnEnviar').addEventListener('click', e => enviarTexto(io));	
