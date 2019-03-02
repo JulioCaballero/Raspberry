@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Escribir texto LCD</title>
+</head>
+
+<body>
+    <input type="text">
+    <button id="btnEnviar">Enviar</button>
+</body>
+</html>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    function enviarTexto(io){
+		    'use strict'
+			var io = io()
+            io.emit('mensaje',"Hola")
+          // console.log(texto);
+		}
+        document.querySelector('#btnEnviar').addEventListener('click', e => enviarTexto(io));	
+</script>
