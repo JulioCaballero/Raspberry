@@ -1,12 +1,8 @@
-.contenedor{
+.container{
     text-align: center;
-    margin-top: 60px
+    background-image: url('1.jgp')
 }
-.img{
-    width: 630px; 
-    height: 1360px;
-    background-repeat: no-repeat;
-} 
+
 input{
     font-size: 17px;
     width: 25%;
