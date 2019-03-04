@@ -1,0 +1,16 @@
+.contenedor{
+    text-align: center;
+    margin-top: 60px
+}
+.img{
+    width: 630px; 
+    height: 1360px;
+    background-repeat: no-repeat;
+} 
+input{
+    font-size: 17px;
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
