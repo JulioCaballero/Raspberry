@@ -13,16 +13,12 @@
 </body>
 </html>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
-<script
-src="http://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>
+    'use strict'
     var io = io.connect('http://127.0.0.1:5000/')    
-    function enviarTexto(io){
-		    'use strict'
-              
+    function enviarTexto(io){              
             let message = $("#mensaje").val();     
             io.emit('mensaje', message)
           // console.log(texto);
