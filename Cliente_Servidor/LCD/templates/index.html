@@ -17,7 +17,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>
     'use strict'
-    var io = io.connect('http://127.0.0.1:5000/')    
+    var io = io.connect('http://192.168.0.62:3000/')    
     function enviarTexto(io){              
             let message = $("#mensaje").val();     
             io.emit('mensaje', message)
